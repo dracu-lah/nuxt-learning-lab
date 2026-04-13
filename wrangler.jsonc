@@ -1,0 +1,7 @@
+{
+  // Cloudflare Pages deployment config. `pnpm deploy` builds with the
+  // `cloudflare_pages` Nitro preset and uploads the resulting `dist/` dir.
+  "name": "nuxt-learning-lab",
+  "compatibility_date": "2025-01-01",
+  "pages_build_output_dir": "./dist"
+}

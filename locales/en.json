@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "dashboard": "Dashboard",
+    "login": "Sign in",
+    "register": "Sign up",
+    "logout": "Sign out"
+  },
+  "home": {
+    "title": "Nuxt Learning Lab",
+    "subtitle": "A guided Nuxt 3 project for Next.js devs.",
+    "cta": "Browse products"
+  },
+  "products": {
+    "title": "Products",
+    "search": "Search products…",
+    "category": "Category",
+    "all": "All",
+    "empty": "No products match your filters.",
+    "price": "Price"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signUp": "Create account",
+    "haveAccount": "Already have an account?",
+    "noAccount": "Need an account?",
+    "signedInAs": "Signed in as {email}",
+    "hint": "Try demo@nuxt.dev / password"
+  },
+  "dashboard": {
+    "title": "Your dashboard",
+    "subtitle": "This page is protected by auth middleware."
+  }
+}

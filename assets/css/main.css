@@ -1,0 +1,7 @@
+/* Nuxt UI already injects Tailwind. This file is your spot for any
+   project-wide overrides. Keep it minimal — Nuxt UI exposes a theme
+   system via `app.config.ts` if you want to swap colors. */
+
+html, body {
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}

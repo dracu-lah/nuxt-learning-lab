@@ -1,0 +1,5 @@
+{
+  // Nuxt generates the real tsconfig under `.nuxt/tsconfig.json` — this file
+  // just extends it. Same trick as Next.js extending `next/tsconfig`.
+  "extends": "./.nuxt/tsconfig.json"
+}
