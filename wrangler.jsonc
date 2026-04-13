@@ -1,7 +1,14 @@
 {
-  // Cloudflare Pages deployment config. `pnpm deploy` builds with the
-  // `cloudflare_pages` Nitro preset and uploads the resulting `dist/` dir.
+  // Cloudflare Workers deployment config. `pnpm build` produces a Workers
+  // bundle at `.output/server/index.mjs` via the `cloudflare_module` Nitro
+  // preset, and static assets at `.output/public/` are served via the
+  // `ASSETS` binding.
   "name": "nuxt-learning-lab",
+  "main": "./.output/server/index.mjs",
   "compatibility_date": "2026-04-13",
-  "pages_build_output_dir": "./dist"
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./.output/public/",
+    "binding": "ASSETS"
+  }
 }

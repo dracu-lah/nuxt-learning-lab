@@ -89,7 +89,7 @@ export default defineNuxtConfig({
   // The `preset` decides which platform to build for. Cloudflare Pages has
   // a native preset — no opennext-style adapter needed.
   nitro: {
-    preset: 'cloudflare_pages',
+    preset: 'cloudflare_module',
     // `routeRules` is Nuxt's version of Next.js `middleware.ts` + route
     // segment `revalidate`. You declaratively say how each URL should be
     // cached, redirected, or rendered. `swr` = Stale-While-Revalidate.

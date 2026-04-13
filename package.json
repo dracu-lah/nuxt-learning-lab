@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy:prod": "wrangler pages deploy dist",
+    "deploy:prod": "wrangler deploy",
     "lint": "eslint ."
   },
   "dependencies": {
