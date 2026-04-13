@@ -21,11 +21,11 @@
       -->
       <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
         <UFormField :label="$t('auth.email')" name="email">
-          <UInput v-model="state.email" type="email" autocomplete="email" />
+          <UInput v-model="state.email" type="email" autocomplete="email" class="w-full" />
         </UFormField>
 
         <UFormField :label="$t('auth.password')" name="password">
-          <UInput v-model="state.password" type="password" autocomplete="current-password" />
+          <UInput v-model="state.password" type="password" autocomplete="current-password" class="w-full" />
         </UFormField>
 
         <p v-if="auth.error" class="text-sm text-red-500">{{ auth.error }}</p>
