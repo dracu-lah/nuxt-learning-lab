@@ -51,8 +51,8 @@ import { useAuthStore } from '~/stores/auth'
 useHead({ title: 'Sign in · Nuxt Learning Lab' })
 
 // `definePageMeta` attaches per-page options (layout, middleware, etc).
-// Not strictly needed here, but shown for reference.
-definePageMeta({ layout: 'default' })
+// Both auth pages use the dedicated `auth` layout (sidebar + brand panel).
+definePageMeta({ layout: 'auth' })
 
 const auth = useAuthStore()
 const route = useRoute()
@@ -64,7 +64,7 @@ const localePath = useLocalePath()
 const state = reactive({ email: 'demo@nuxt.dev', password: 'password' })
 
 const schema = z.object({
-  email: z.string().email(),
+  email: z.email(),
   password: z.string().min(1, 'Required')
 })
 

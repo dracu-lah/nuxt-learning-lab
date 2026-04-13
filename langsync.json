@@ -1,0 +1,26 @@
+{
+  "source": "i18n/locales/en.json",
+  "dir": "i18n/locales",
+  "max_workers_per_locale": 5,
+  "max_parallel_locales": 3,
+  "delay_between_requests": 0.2,
+  "batch_size": 25,
+  "retry_count": 3,
+  "whitelist": [
+    "Nuxt",
+    "Nuxt 3",
+    "Nuxt 4",
+    "Nuxt UI",
+    "Nuxt Learning Lab",
+    "Next.js",
+    "Vue",
+    "Vue 3",
+    "Pinia",
+    "Cloudflare",
+    "Cloudflare Pages",
+    "Tailwind",
+    "TypeScript",
+    "Zod",
+    "demo@nuxt.dev"
+  ]
+}

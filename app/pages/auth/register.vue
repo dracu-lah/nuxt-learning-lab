@@ -42,6 +42,8 @@
 import { z } from 'zod'
 import { useAuthStore } from '~/stores/auth'
 
+definePageMeta({ layout: 'auth' })
+
 useHead({ title: 'Sign up · Nuxt Learning Lab' })
 
 const auth = useAuthStore()
@@ -52,7 +54,7 @@ const state = reactive({ name: '', email: '', password: '' })
 
 const schema = z.object({
   name: z.string().min(1),
-  email: z.string().email(),
+  email: z.email(),
   password: z.string().min(6, 'At least 6 characters')
 })
 

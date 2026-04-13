@@ -38,21 +38,19 @@
 
         <USelectMenu
           v-model="category"
-          :options="categoryOptions"
-          value-attribute="value"
-          option-attribute="label"
+          :items="categoryOptions"
+          value-key="value"
           :placeholder="$t('products.category')"
         />
 
         <USelectMenu
           v-model="sort"
-          :options="sortOptions"
-          value-attribute="value"
-          option-attribute="label"
+          :items="sortOptions"
+          value-key="value"
           placeholder="Sort"
         />
 
-        <UButton variant="soft" color="gray" icon="i-lucide-x" @click="resetFilters">
+        <UButton variant="soft" color="neutral" icon="i-lucide-x" @click="resetFilters">
           Reset
         </UButton>
       </div>
@@ -102,7 +100,11 @@
 
     <!-- Pagination -->
     <div v-if="data && totalPages > 1" class="flex justify-center pt-2">
-      <UPagination v-model="page" :page-count="limit" :total="data.total" />
+      <UPagination
+        v-model:page="page"
+        :items-per-page="limit"
+        :total="data.total"
+      />
     </div>
   </div>
 </template>

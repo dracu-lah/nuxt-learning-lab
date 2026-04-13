@@ -1,0 +1,61 @@
+/*
+  Tailwind v4 + Nuxt UI v4 — single-file theming
+  ===============================================
+  This is the ONLY place colors, radii, and typography live now. The old
+  `tailwind.config.ts` and `app.config.ts` palette settings are gone.
+
+  How it layers:
+    1. `@import "tailwindcss"` brings in the Tailwind v4 engine.
+    2. `@import "@nuxt/ui"` registers Nuxt UI's components and design
+       tokens (semantic colors, sizes, spacing).
+    3. `@theme` is Tailwind v4's CSS-first config block. Anything you put
+       here turns into a Tailwind utility AND a CSS custom property.
+    4. `:root` / `.dark` overrides Nuxt UI's component-level variables
+       (the `--ui-*` tokens) per color mode. This is the same pattern
+       shadcn/ui uses, but with Nuxt UI's semantic naming.
+
+  Customizing further:
+    - Change `--color-primary-*` below to swap the brand color.
+    - Change `--ui-radius` to bring rounded corners back (e.g. `0.5rem`).
+    - Change `--font-sans` / `--font-mono` to swap typefaces — the
+      `@nuxt/fonts` module auto-downloads any Google font referenced
+      here and inlines it with subset + preload.
+*/
+
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  /* ---------- Typography ---------- */
+  /* @nuxt/fonts auto-detects font-family declarations here, downloads
+     the matching Google Font at build time, and self-hosts it with a
+     hashed filename + long cache headers. No <link> tag needed. */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ---------- Border radius: globally zero ---------- */
+  /* Override every `rounded-*` Tailwind utility. Nuxt UI components
+     reference these utilities internally, so this single block kills
+     corner rounding across <UButton>, <UCard>, <UBadge>, <UInput>… */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-full: 0;
+}
+
+/* Nuxt UI component-level variable. The `ui.colors.primary: 'red'`
+   alias in `app.config.ts` already wires the brand color through. This
+   single override cancels the default rounded-corner radius without
+   touching every component. */
+:root {
+  --ui-radius: 0;
+}
+
+/* Project-wide typography niceties — opt-in OpenType features. */
+html, body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}

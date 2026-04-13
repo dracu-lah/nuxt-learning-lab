@@ -10,7 +10,7 @@ import { createUser, findUserByEmail } from '~~/server/utils/fakeDb'
 import { signToken } from '~~/server/utils/token'
 
 const BodySchema = z.object({
-  email: z.string().email(),
+  email: z.email(),
   password: z.string().min(6, 'Password must be at least 6 characters'),
   name: z.string().min(1)
 })

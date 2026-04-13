@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "fruits": "Fruits",
+    "pricing": "Pricing",
+    "dashboard": "Dashboard",
+    "cart": "Cart",
+    "login": "Sign in",
+    "register": "Sign up",
+    "logout": "Sign out"
+  },
+  "home": {
+    "title": "Nuxt Learning Lab",
+    "subtitle": "A guided Nuxt 4 project for Next.js devs.",
+    "cta": "Browse products"
+  },
+  "products": {
+    "title": "Products",
+    "search": "Search products…",
+    "category": "Category",
+    "all": "All",
+    "empty": "No products match your filters.",
+    "price": "Price"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signUp": "Create account",
+    "haveAccount": "Already have an account?",
+    "noAccount": "Need an account?",
+    "signedInAs": "Signed in as {email}",
+    "hint": "Try demo{'@'}nuxt.dev / password",
+    "sidebarHeadline": "Build the web, the Nuxt way.",
+    "sidebarSubtitle": "A learning lab for the modern Vue stack — auth, i18n, charts, RTL, and more.",
+    "bullet1": "File-based routing",
+    "bullet2": "Built-in SSR + edge deploy",
+    "bullet3": "Type-safe end to end"
+  },
+  "dashboard": {
+    "title": "Your dashboard",
+    "subtitle": "This page is protected by auth middleware.",
+    "kpiFruits": "Fruits in stock",
+    "kpiCart": "Cart items",
+    "kpiValue": "Cart value",
+    "chartTitle": "Inventory by category",
+    "chartLabel": "Quantity"
+  },
+  "cart": {
+    "title": "Your cart",
+    "empty": "Your cart is empty.",
+    "add": "Add to cart",
+    "added": "Added to cart",
+    "remove": "Remove",
+    "clear": "Clear cart",
+    "qty": "Quantity",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout"
+  },
+  "fruits": {
+    "title": "Fruits",
+    "subtitle": "Manage your fruit inventory.",
+    "create": "Add fruit",
+    "edit": "Edit fruit",
+    "search": "Search fruits…",
+    "category": "Category",
+    "harvested": "Harvested on",
+    "allCategories": "All categories",
+    "empty": "No fruits found.",
+    "results": "results",
+    "name": "Name",
+    "namePlaceholder": "e.g. Valencia Orange",
+    "price": "Price",
+    "qty": "Quantity",
+    "organic": "Organic",
+    "notes": "Notes",
+    "notesPlaceholder": "Anything worth remembering",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "created": "Fruit added",
+    "updated": "Fruit updated",
+    "deleted": "Fruit deleted",
+    "confirmDelete": "Delete this fruit?",
+    "resetFilters": "Reset filters",
+    "backToList": "Back to list",
+    "cat": {
+      "citrus": "Citrus",
+      "berry": "Berry",
+      "tropical": "Tropical",
+      "stone": "Stone",
+      "melon": "Melon"
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Choose a plan that fits your team.",
+    "popular": "Most popular",
+    "perMonth": "/mo",
+    "cta": "Get started",
+    "tab": {
+      "plans": "Plans",
+      "faq": "FAQ"
+    },
+    "free": {
+      "name": "Free",
+      "desc": "For tinkering and side projects."
+    },
+    "pro": {
+      "name": "Pro",
+      "desc": "For small teams shipping fast."
+    },
+    "business": {
+      "name": "Business",
+      "desc": "For growing companies."
+    },
+    "feat": {
+      "community": "Community support",
+      "upTo3": "Up to 3 projects",
+      "basicSupport": "Basic email support",
+      "everythingFree": "Everything in Free",
+      "unlimited": "Unlimited projects",
+      "prioritySupport": "Priority support",
+      "analytics": "Advanced analytics",
+      "everythingPro": "Everything in Pro",
+      "sso": "SSO and SCIM",
+      "audit": "Audit logs",
+      "sla": "99.99% uptime SLA"
+    }
+  },
+  "faq": {
+    "q1": {
+      "q": "What is Nuxt Learning Lab?",
+      "a": "A reference project that demonstrates auth, i18n, RTL, charts, and most other patterns you'll meet in a real Nuxt app."
+    },
+    "q2": {
+      "q": "Do I need a credit card to start?",
+      "a": "No. The Free plan needs no card. You can upgrade at any time from the dashboard."
+    },
+    "q3": {
+      "q": "Is my data secure?",
+      "a": "All data is encrypted in transit and at rest. Pro and Business plans add audit logs and SSO."
+    },
+    "q4": {
+      "q": "Do you support multiple languages?",
+      "a": "Yes. The UI is available in English, Spanish, and Arabic, with full right-to-left support."
+    },
+    "q5": {
+      "q": "How do I get help?",
+      "a": "Free users have community support. Pro and Business plans include priority email and chat."
+    }
+  }
+}

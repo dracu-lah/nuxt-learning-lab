@@ -9,6 +9,11 @@
 // `defineNuxtConfig` is a global — you don't need to import it. Nuxt
 // auto-imports it (and most other Nuxt APIs) at build time.
 
+// Tailwind v4's Vite plugin compiles the CSS-first config (the `@theme`
+// block in `app/assets/css/main.css`). v4 dropped the JS config file —
+// no `tailwind.config.ts` exists in this repo by design.
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   // Enables strict Vue devtools + better error overlays in dev.
   devtools: { enabled: true },
@@ -17,14 +22,24 @@ export default defineNuxtConfig({
   // components, server routes, pages, etc. Think of this like wiring up
   // `@next/bundle-analyzer` + NextAuth + next-intl all at once.
   modules: [
-    '@nuxt/ui',        // Tailwind + Headless UI components (auto-registered)
-    '@nuxtjs/i18n',    // Localized routing & translations
-    '@pinia/nuxt'      // Pinia store (Vue's Zustand/Redux equivalent)
+    '@nuxt/ui',         // Tailwind v4 + Reka UI components (auto-registered)
+    '@nuxt/fonts',      // Auto-downloads + self-hosts any font referenced in CSS
+    '@nuxtjs/i18n',     // Localized routing & translations
+    '@nuxtjs/sitemap',  // Generates /sitemap.xml from your pages + i18n routes
+    '@nuxtjs/robots',   // Generates /robots.txt and links to the sitemap
+    '@pinia/nuxt'       // Pinia store (Vue's Zustand/Redux equivalent)
   ],
 
   // Global CSS. Files listed here are injected into every page — like
   // importing `globals.css` in `app/layout.tsx` in Next.js.
+  // The Tailwind v4 directives + `@theme` block live in main.css.
   css: ['~/assets/css/main.css'],
+
+  // --- Vite -------------------------------------------------------------
+  // Tailwind v4 is configured via a Vite plugin (no PostCSS file needed).
+  vite: {
+    plugins: [tailwindcss()]
+  },
 
   // --- i18n ---------------------------------------------------------------
   // Same idea as `next-intl`. `strategy: 'prefix_except_default'` means:
@@ -32,13 +47,26 @@ export default defineNuxtConfig({
   //   /es/about   → Spanish
   // You get `useI18n()` in any component, similar to next-intl's hooks.
   i18n: {
+    // `dir` controls the writing direction. @nuxtjs/i18n exposes it via
+    // `useLocaleHead()` so we can bind `<html dir="rtl">` from app.vue.
     locales: [
-      { code: 'en', name: 'English', file: 'en.json' },
-      { code: 'es', name: 'Español', file: 'es.json' }
+      { code: 'en', name: 'English',  language: 'en-US', file: 'en.json', dir: 'ltr' },
+      { code: 'es', name: 'Español',  language: 'es-ES', file: 'es.json', dir: 'ltr' },
+      { code: 'ar', name: 'العربية', language: 'ar-SA', file: 'ar.json', dir: 'rtl' }
     ],
     defaultLocale: 'en',
-    langDir: 'locales/',
-    strategy: 'prefix_except_default'
+    strategy: 'prefix_except_default',
+    bundle: {
+      optimizeTranslationDirective: false
+    }
+  },
+
+  // --- Site identity -----------------------------------------------------
+  // Used by @nuxtjs/sitemap, @nuxtjs/robots, and useSeoMeta to generate
+  // canonical URLs, sitemap entries, and OG tags. One source of truth.
+  site: {
+    url: 'https://nuxt-learning-lab.pages.dev',
+    name: 'Nuxt Learning Lab'
   },
 
   // --- Runtime config -----------------------------------------------------
@@ -68,16 +96,20 @@ export default defineNuxtConfig({
     routeRules: {
       // Cache the public products list at the edge for 60s.
       '/api/products': { swr: 60 },
-      // Force SPA rendering for the dashboard (no SSR leaking auth state).
-      '/dashboard': { ssr: false }
+      // Force SPA rendering for the dashboard and cart (no SSR leaking
+      // auth state, and the cart is a client-only Pinia store anyway).
+      '/dashboard': { ssr: false },
+      '/cart': { ssr: false }
     }
   },
 
-  // Dark mode preference — Nuxt UI reads this.
+  // Dark mode default. `system` honors the OS setting; the user can
+  // override via the <UColorModeButton> in the header.
   colorMode: {
-    preference: 'dark'
+    preference: 'system',
+    fallback: 'dark'
   },
 
   // Pins a compatibility date so Nuxt/Nitro features don't shift under you.
-  compatibilityDate: '2025-01-01'
+  compatibilityDate: '2026-04-13'
 })

@@ -1,0 +1,129 @@
+{
+  "nav": {
+    "home": "Hogar",
+    "products": "Productos",
+    "dashboard": "Panel",
+    "login": "Iniciar sesión",
+    "register": "Inscribirse",
+    "logout": "desconectar",
+    "cart": "Carro"
+  },
+  "home": {
+    "title": "Nuxt Learning Lab",
+    "subtitle": "Un proyecto Nuxt 3 guiado para desarrolladores Next.js.",
+    "cta": "Explorar productos"
+  },
+  "products": {
+    "title": "Productos",
+    "search": "Buscar productos…",
+    "category": "Categoría",
+    "all": "Todo",
+    "empty": "Ningún producto coincide con tus filtros.",
+    "price": "Precio"
+  },
+  "auth": {
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "signIn": "Iniciar sesión",
+    "signUp": "Crear una cuenta",
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "noAccount": "¿Necesitas una cuenta?",
+    "signedInAs": "Iniciado sesión como {email}",
+    "hint": "Pruebe demo{'@'}nuxt.dev/contraseña"
+  },
+  "dashboard": {
+    "title": "Tu panel de control",
+    "subtitle": "Esta página está protegida por middleware de autenticación."
+  },
+  "cart": {
+    "title": "tu carrito",
+    "empty": "Tu carrito está vacío.",
+    "add": "Añadir a la cesta",
+    "added": "Agregado al carrito",
+    "remove": "Eliminar",
+    "clear": "Limpiar carrito",
+    "qty": "Cantidad",
+    "subtotal": "Total parcial",
+    "checkout": "Verificar"
+  },
+  "fruits": {
+    "cat": {
+      "citrus": "Agrios",
+      "berry": "Baya",
+      "tropical": "Tropical",
+      "stone": "Piedra",
+      "melon": "Melón"
+    },
+    "qty": "Cantidad",
+    "organic": "Orgánico",
+    "notes": "Notas",
+    "notesPlaceholder": "Cualquier cosa que valga la pena recordar",
+    "save": "Ahorrar",
+    "cancel": "Cancelar",
+    "delete": "Borrar",
+    "created": "fruta agregada",
+    "updated": "Fruta actualizada",
+    "deleted": "fruta eliminada",
+    "confirmDelete": "¿Eliminar esta fruta?",
+    "resetFilters": "Restablecer filtros",
+    "backToList": "volver a la lista"
+  },
+  "pricing": {
+    "tab": {
+      "plans": "Planes",
+      "faq": "Preguntas frecuentes"
+    },
+    "free": {
+      "name": "Gratis",
+      "desc": "Para retoques y proyectos paralelos."
+    },
+    "pro": {
+      "name": "Pro",
+      "desc": "Para equipos pequeños envío rápido."
+    },
+    "business": {
+      "name": "Negocio",
+      "desc": "Para empresas en crecimiento."
+    },
+    "feat": {
+      "community": "Apoyo comunitario",
+      "upTo3": "Hasta 3 proyectos",
+      "basicSupport": "Soporte básico por correo electrónico",
+      "everythingFree": "Todo gratis",
+      "unlimited": "Proyectos ilimitados",
+      "prioritySupport": "Apoyo prioritario",
+      "analytics": "Análisis avanzado",
+      "everythingPro": "Todo en Pro",
+      "sso": "SSO y SCIM",
+      "audit": "Registros de auditoría",
+      "sla": "99,99% de tiempo de actividad SLA"
+    },
+    "title": "Precios",
+    "subtitle": "Elija un plan que se adapte a su equipo.",
+    "popular": "mas popular",
+    "perMonth": "/mes",
+    "cta": "empezar"
+  },
+  "faq": {
+    "q1": {
+      "q": "¿Qué es Nuxt Learning Lab?",
+      "a": "Un proyecto de referencia que demuestra autenticación, i18n, RTL, gráficos y la mayoría de los otros patrones que encontrará en una aplicación Nuxt real."
+    },
+    "q2": {
+      "q": "¿Necesito una tarjeta de crédito para comenzar?",
+      "a": "No. El plan Gratis no necesita tarjeta. Puede actualizar en cualquier momento desde el panel."
+    },
+    "q3": {
+      "q": "¿Están mis datos seguros?",
+      "a": "Todos los datos se cifran en tránsito y en reposo. Los planes Pro y Business agregan registros de auditoría y SSO."
+    },
+    "q4": {
+      "q": "¿Admite varios idiomas?",
+      "a": "Sí. La interfaz de usuario está disponible en inglés, español y árabe, con soporte completo de derecha a izquierda."
+    },
+    "q5": {
+      "q": "¿Cómo obtengo ayuda?",
+      "a": "Los usuarios gratuitos tienen soporte comunitario. Los planes Pro y Business incluyen correo electrónico y chat prioritarios."
+    }
+  }
+}
