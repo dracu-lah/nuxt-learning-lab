@@ -37,4 +37,31 @@ useHead({
     dir:  () => head.value.htmlAttrs?.dir  ?? 'ltr'
   }
 })
+
+// Site-wide SEO defaults. `ogImage` is resolved against `site.url` from
+// nuxt.config.ts, so `/og-image.png` becomes an absolute URL in the meta
+// tag — and @nuxtjs/sitemap's `discoverImages` picks it up for every
+// route in sitemap.xml under the <image:image> namespace.
+useSeoMeta({
+  title: 'Nuxt Learning Lab',
+  description:
+    'A hands-on Nuxt 4 playground exploring Nuxt UI v4, i18n, Pinia, and Cloudflare Workers deploys.',
+  ogSiteName: 'Nuxt Learning Lab',
+  ogType: 'website',
+  ogUrl: 'https://nuxt-learning-lab.dracu.workers.dev',
+  ogTitle: 'Nuxt Learning Lab',
+  ogDescription:
+    'A hands-on Nuxt 4 playground exploring Nuxt UI v4, i18n, Pinia, and Cloudflare Workers deploys.',
+  ogImage: '/og-image.png',
+  ogImageType: 'image/png',
+  ogImageWidth: 1904,
+  ogImageHeight: 1005,
+  ogImageAlt: 'Nuxt Learning Lab',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Nuxt Learning Lab',
+  twitterDescription:
+    'A hands-on Nuxt 4 playground exploring Nuxt UI v4, i18n, Pinia, and Cloudflare Workers deploys.',
+  twitterImage: '/og-image.png',
+  twitterImageAlt: 'Nuxt Learning Lab'
+})
 </script>

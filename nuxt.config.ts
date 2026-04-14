@@ -65,8 +65,17 @@ export default defineNuxtConfig({
   // Used by @nuxtjs/sitemap, @nuxtjs/robots, and useSeoMeta to generate
   // canonical URLs, sitemap entries, and OG tags. One source of truth.
   site: {
-    url: 'https://nuxt-learning-lab.pages.dev',
-    name: 'Nuxt Learning Lab'
+    url: 'https://nuxt-learning-lab.dracu.workers.dev',
+    name: 'Nuxt Learning Lab',
+    description: 'A hands-on Nuxt 4 playground exploring Nuxt UI v4, i18n, Pinia, and Cloudflare Workers deploys.'
+  },
+
+  // --- Sitemap -----------------------------------------------------------
+  // `discoverImages` (default: true) scrapes rendered pages for <img> and
+  // og:image tags, so the global og-image declared in app.vue is picked up
+  // automatically for every URL in sitemap.xml under the image:image tag.
+  sitemap: {
+    discoverImages: true
   },
 
   // --- Runtime config -----------------------------------------------------
