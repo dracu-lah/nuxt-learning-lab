@@ -65,7 +65,7 @@ export default defineNuxtConfig({
   // Used by @nuxtjs/sitemap, @nuxtjs/robots, and useSeoMeta to generate
   // canonical URLs, sitemap entries, and OG tags. One source of truth.
   site: {
-    url: 'https://nuxt-learning-lab.dracu.workers.dev',
+    url: 'https://nuxt.nevil.dev',
     name: 'Nuxt Learning Lab',
     description: 'A hands-on Nuxt 4 playground exploring Nuxt UI v4, i18n, Pinia, and Cloudflare Workers deploys.'
   },

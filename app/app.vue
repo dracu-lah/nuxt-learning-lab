@@ -48,7 +48,7 @@ useSeoMeta({
     'A hands-on Nuxt 4 playground exploring Nuxt UI v4, i18n, Pinia, and Cloudflare Workers deploys.',
   ogSiteName: 'Nuxt Learning Lab',
   ogType: 'website',
-  ogUrl: 'https://nuxt-learning-lab.dracu.workers.dev',
+  ogUrl: 'https://nuxt.nevil.dev',
   ogTitle: 'Nuxt Learning Lab',
   ogDescription:
     'A hands-on Nuxt 4 playground exploring Nuxt UI v4, i18n, Pinia, and Cloudflare Workers deploys.',
